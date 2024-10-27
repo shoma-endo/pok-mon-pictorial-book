@@ -1,8 +1,7 @@
 'use client';
 
 import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
-import { POKEMON_TYPES, TYPE_COLORS, type PokemonType } from '@/lib/pokemon';
+import { POKEMON_TYPES, TYPE_COLORS } from '@/lib/pokemon';
 
 interface TypeFilterProps {
   selectedType: string;
