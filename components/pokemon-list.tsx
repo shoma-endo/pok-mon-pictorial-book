@@ -3,10 +3,10 @@
 import { useEffect, useState, useCallback, useRef } from 'react';
 import { Pokemon } from '@/lib/types';
 import { PokemonCard } from './pokemon-card';
-import { fetchPokemonBatch } from '@/lib/pokemon';
+import { fetchPokemonBatch, getTypeStyle } from '@/lib/pokemon';
 import { useInView } from 'react-intersection-observer';
 import { Input } from '@/components/ui/input';
-import { POKEMON_TYPES, TYPE_COLORS } from '@/lib/pokemon';
+import { POKEMON_TYPES } from '@/lib/pokemon';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 import { PokemonLoading } from './pokemon-loading';
@@ -103,8 +103,7 @@ export function PokemonList() {
           <Badge
             onClick={() => setSelectedType('all')}
             className={cn(
-              'cursor-pointer hover:opacity-80',
-              selectedType === 'all' ? 'bg-primary' : 'bg-secondary'
+              'cursor-pointer hover:opacity-80 capitalize',
             )}
           >
             All Types
@@ -115,12 +114,8 @@ export function PokemonList() {
               onClick={() => setSelectedType(type)}
               className={cn(
                 'cursor-pointer hover:opacity-80 capitalize',
-                selectedType === type ? 'bg-primary' : 'bg-secondary'
               )}
-              style={{
-                backgroundColor: selectedType === type ? TYPE_COLORS[type] : undefined,
-                color: selectedType === type ? 'white' : undefined
-              }}
+              style={getTypeStyle(type)}
             >
               {type}
             </Badge>
