@@ -3,7 +3,7 @@
 [Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/shoma-endo/pok-mon-pictorial-book)
 
 # production
-[text](https://pokemon-pictorial-book.vercel.app/)
+[pokemon-pictorial-book](https://pokemon-pictorial-book.vercel.app/)
 
 # environment construction
 ```diff
