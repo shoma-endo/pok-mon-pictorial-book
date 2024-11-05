@@ -17,7 +17,7 @@ export function PokemonDetail({ pokemon }: PokemonDetailProps) {
   const { id, name, types, sprites, stats, height, weight, abilities } = pokemon;
 
   return (
-    <div className="container py-8">
+    <div className="container py-8 flex flex-col items-center min-h-screen">
       <div className="mb-8">
         <Link href="/">
           <Button variant="ghost" size="sm">
