@@ -7,8 +7,9 @@ import { cn } from '@/lib/utils';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Pokémon Explorer',
+  title: 'Pokémon Illustrated Book',
   description: 'Explore the world of Pokémon with detailed information and beautiful design',
+  icons: "https://img.icons8.com/?size=100&id=16460&format=png&color=000000"
 };
 
 export default function RootLayout({
